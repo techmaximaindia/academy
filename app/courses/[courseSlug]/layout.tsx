@@ -69,7 +69,7 @@ export default async function CourseShowLayout({
 
   const courseUnits = await getCourseUnitsMap(course.id)
 
-  if (!course.generatedAt || courseUnits.size === 0) {
+  if (courseUnits.size === 0) {
     return <CourseGenerating />
   }
 
